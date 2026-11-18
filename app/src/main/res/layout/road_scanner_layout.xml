@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/roadScannerRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- KHUNG KHÓA BẢNG CẦU (Cho phép kéo phóng to/thu nhỏ khớp khít từng ô cầu trên mọi máy) -->
+    <FrameLayout
+        android:id="@+id/roadGridFrame"
+        android:layout_width="260dp"
+        android:layout_height="110dp"
+        android:background="@drawable/bg_road_box">
+
+        <TextView
+            android:id="@+id/tvRoadHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="2dp"
+            android:background="#CC000000"
+            android:paddingStart="6dp"
+            android:paddingTop="1dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="1dp"
+            android:text="🎯 KHỚP KHUNG LÊN BẢNG CẦU (6 HÀNG)"
+            android:textColor="#00E5FF"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <!-- Tay cầm góc dưới phải để kéo giãn kích thước khung -->
+        <TextView
+            android:id="@+id/btnResizeHandle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|end"
+            android:background="#CC00E5FF"
+            android:gravity="center"
+            android:text="⤡"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <!-- Thanh điều khiển khung cào data -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLockAndCrawl"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1.5"
+            android:backgroundTint="#00B0FF"
+            android:text="🔒 Khóa &amp; Cào Data"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnToggleCols"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="0.8"
+            android:backgroundTint="#37474F"
+            android:text="6x12"
+            android:textColor="#FFD54F"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnHideRoadBox"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="3dp"
+            android:layout_weight="0.7"
+            android:backgroundTint="#455A64"
+            android:text="Ẩn"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp" />
+    </LinearLayout>
+</LinearLayout>
